@@ -1,5 +1,5 @@
 {
-    "name": "nvidia/cuda 8.0-cudnn7-devel-ubuntu16.04 for Dev/Test",
+    "name": "nvidia/cuda 8.0-cudnn7-devel-ubuntu16.04",
     "description": "nvidia/cuda:8.0-cudnn7-devel-ubuntu16.04 ephemeral dev/test environment with Nimbix Desktop.",
     "author": "NVIDIA",
     "licensed": true,
