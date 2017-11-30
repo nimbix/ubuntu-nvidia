@@ -13,6 +13,14 @@ EXPOSE 22
 EXPOSE 5901
 EXPOSE 443
 
+# Install CUDA samples
+RUN apt-get -y install cuda-samples-8-0
+
+# Update VirtualGL
+ENV VGLVER 2.5.2
+RUN rpm -Uvh "https://downloads.sourceforge.net/project/virtualgl/$VGLVER/VirtualGL-${VGLVER}.x86_64.rpm" "https://downloads.sourceforge.net/project/virtualgl/$VGLVER/VirtualGL-${VGLVER}.i386.rpm"
+RUN chmod u+s /usr/lib64/libdlfaker.so /usr/lib64/libvglfaker.so
+
 # Metadata
 COPY NAE/AppDef.json.8.0-cudnn7-devel-ubuntu16.04 /etc/NAE/AppDef.json
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate
