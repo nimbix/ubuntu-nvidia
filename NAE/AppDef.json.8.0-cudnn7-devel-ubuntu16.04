@@ -4,7 +4,7 @@
     "author": "NVIDIA",
     "licensed": true,
     "classifications": [
-        "Software Development/Software Testing"
+        "AI/Development Tools"
     ],
     "machines": [
         "ng[3-9]",
